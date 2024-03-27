@@ -19,7 +19,9 @@ st.set_page_config(layout="wide")
 
 device = torch.device('cpu')
 
-checkpoint = "MBZUAI/LaMini-T5-738M"
+# checkpoint = "MBZUAI/LaMini-T5-738M"
+# checkpoint = "/content/drive/MyDrive/notebook/training_results/zephyr_kr_1500step"
+checkpoint = "HuggingFaceH4/zephyr-7b-beta"
 print(f"Checkpoint path: {checkpoint}")  # Add this line for debugging
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 base_model = AutoModelForSeq2SeqLM.from_pretrained(
